@@ -1,0 +1,110 @@
+.home {
+  padding: calc(var(--header-height) + 20px) 0 100px 0;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 816px;
+    margin: 0 auto;
+    grid-gap: 0.5rem;
+  }
+  &-logo {
+    max-width: 368px;
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+  &-description {
+    font-size: clamp(14px, 1.125vw, 18px);
+    color: #cbcbcb;
+    text-align: center;
+    line-height: 180%;
+
+    position: relative;
+    &::after {
+      @include pseudo;
+      width: 125%;
+      height: 300%;
+      transform: translate(-50%, -50%);
+      inset: 50%;
+      pointer-events: none;
+      z-index: -1;
+      background-image: url("../../img/homeContentCloud.webp");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  &-title {
+    color: #fcd835;
+    font-family: var(--ff-cd);
+    font-size: clamp(32px, 2.75vw, 44px);
+    font-weight: 700;
+    text-align: center;
+  }
+  &-divider {
+    max-width: 536px;
+    width: 100%;
+  }
+}
+
+.counter {
+  --ratio: 90px;
+
+  margin-bottom: 60px;
+
+  &-digits {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, var(--ratio));
+    justify-content: center;
+  }
+  &-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--ratio);
+    height: var(--ratio);
+
+    background-image: url("../../img/counterBackground.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  &-number {
+    line-height: 80%;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--ff-cd);
+  }
+  &-label {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+
+@include laptop {
+  .home {
+    &-logo {
+      max-width: 300px;
+    }
+  }
+  .counter {
+    --ratio: 80px;
+    &-label {
+      font-size: 10px;
+    }
+    &-number {
+      font-size: 20px;
+    }
+  }
+}
+
+@include mobile {
+  .home {
+    &-logo {
+      max-width: 220px;
+    }
+  }
+}

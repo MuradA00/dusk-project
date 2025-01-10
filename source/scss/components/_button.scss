@@ -1,0 +1,78 @@
+.button {
+  --min-w: 400px;
+  --min-h: 76px;
+
+  font-family: var(--ff-cd);
+  font-size: clamp(1rem, 1.125vw, 1.125rem);
+  font-weight: 700;
+
+  min-height: var(--min-h);
+  min-width: var(--min-w);
+
+  position: relative;
+
+  background-image: var(--bg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  transition: transform 400ms var(--delay-transition);
+  will-change: transform;
+
+  @include hover {
+    transform: scale(1.1);
+  }
+
+  padding: 0 1rem;
+  &--small {
+    --min-h: 48px;
+    --min-w: 244px;
+
+    font-size: 14px;
+  }
+  &--transparent {
+    --bg: url("../../img/buttons/buttonSmall_transparent.png");
+  }
+  &--orange {
+    --bg: url("../../img/buttons/buttonLarge_orange.png");
+  }
+  &--purple {
+    --bg: url("../../img/buttons/buttonLarge_purple.png");
+  }
+  &--gray {
+    --bg: url("../../img/buttons/buttonLarge_gray.png");
+  }
+  &--red {
+    --bg: url("../../img/buttons/buttonLarge_red.png");
+    --min-w: 474px;
+    --min-h: 86px;
+
+    & > span {
+      transform: translateY(6px);
+    }
+  }
+}
+
+@include laptop {
+  .button {
+    --min-h: 54px;
+    --min-w: 320px;
+
+    &--red {
+      --min-w: 400px;
+      --min-h: 74px;
+    }
+    &--small {
+      --min-w: 240px;
+      --min-h: 44px;
+    }
+  }
+}
+
+@include tablet {
+  .button {
+    &--red {
+      --min-w: 340px;
+      --min-h: 70px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  background-color: rgba(var(--clr-b), 0.5);
+
+  color: #434a61;
+  &-copy {
+    font-size: 14px;
+  }
+  &-body {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    font-size: 12px;
+    &__icon {
+      width: 40px;
+      aspect-ratio: 1;
+      fill: currentColor;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__bottom {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include small-tablet {
+  .footer {
+    padding: 1.5rem 0;
+    &-body {
+      min-height: auto;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      grid-gap: 2rem;
+    }
+  }
+}

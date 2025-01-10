@@ -1,0 +1,39 @@
+.heading {
+  display: grid;
+  grid-template-columns: 28% auto 28%;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: 10px;
+  }
+  &-label {
+    color: rgba(var(--clr-y), 1);
+    font-size: clamp(14px, 1.25vw, 20px);
+    font-weight: 700;
+    font-family: var(--ff-cd);
+    text-align: center;
+    margin-bottom: .25rem;
+  }
+  &-title {
+    color: rgba(var(--clr-light), 1);
+    font-size: clamp(24px, 2.75vw, 44px);
+    font-weight: 700;
+    font-family: var(--ff-cd);
+    text-align: center;
+    line-height: 100%;
+  }
+}
+
+@include tablet {
+  .heading {
+    display: block;
+    &-aside {
+      display: none;
+    }
+  }
+}
