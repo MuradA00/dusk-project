@@ -26,14 +26,38 @@ body {
   position: relative;
 
   background-image: url("../../img/background/bg.webp");
-  background-size: 100% auto;
+  background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
 
+  &::after {
+    @include pseudo;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--clr-b), .35);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    display: none;
+  }
   @include tablet {
     background-size: auto;
     background-position: top center;
+    &::after {
+      display: block;
+    }
   }
+}
+
+.fade-in {
+  display: block !important;
+  animation: fade-in 600ms ease;
+}
+
+@keyframes fade-in {
+  from {opacity: 0; transform: translateY(0.5rem);}
+  to {opacity: 100%; transform: translateY(0);}
 }
 
 .locked {
@@ -52,7 +76,7 @@ main {
 
   & > *:last-child {
     border-bottom: none;
-    padding-bottom: 15rem;
+    padding-bottom: clamp(7rem, 15vw, 15rem);
   }
 }
 

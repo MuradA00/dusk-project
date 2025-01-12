@@ -55,8 +55,8 @@
 
   &-digits {
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, var(--ratio));
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
   &-unit {
@@ -66,11 +66,29 @@
     justify-content: center;
     width: var(--ratio);
     height: var(--ratio);
+    margin: 0 -.5rem;
 
     background-image: url("../../img/counterBackground.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top left;
+
+    position: relative;
+    &:not(:last-child) {
+      &::after {
+        @include pseudo;
+
+        width: 12px;
+        height: 12px;
+        border: 2px solid #868693;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        z-index: 1;
+        right: 1px;
+      }
+    }
   }
   &-number {
     line-height: 80%;
@@ -86,8 +104,15 @@
 
 @include laptop {
   .home {
+    overflow: hidden;
     &-logo {
       max-width: 300px;
+    }
+    &-description {
+      &::after {
+        width: 1000px;
+        height: 400px;
+      }
     }
   }
   .counter {
@@ -104,7 +129,7 @@
 @include mobile {
   .home {
     &-logo {
-      max-width: 220px;
+      max-width: 160px;
     }
   }
 }

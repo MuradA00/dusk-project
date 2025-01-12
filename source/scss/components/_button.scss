@@ -1,6 +1,7 @@
 .button {
   --min-w: 400px;
   --min-h: 76px;
+  --bg: url("../../img/buttons/buttonSmall_transparent.png");
 
   font-family: var(--ff-cd);
   font-size: clamp(1rem, 1.125vw, 1.125rem);
@@ -15,14 +16,15 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
-  transition: transform 400ms var(--delay-transition);
+  transition: transform 400ms ease;
   will-change: transform;
+  padding: 0 1rem;
+  filter: drop-shadow(0 0 1rem rgba(var(--shadow), 1));
 
   @include hover {
     transform: scale(1.1);
   }
 
-  padding: 0 1rem;
   &--small {
     --min-h: 48px;
     --min-w: 244px;
@@ -33,15 +35,22 @@
     --bg: url("../../img/buttons/buttonSmall_transparent.png");
   }
   &--orange {
+    --shadow: #{HexToRGB(#b5552a)};
     --bg: url("../../img/buttons/buttonLarge_orange.png");
   }
   &--purple {
+    --shadow: #{HexToRGB(#723598)};
     --bg: url("../../img/buttons/buttonLarge_purple.png");
   }
   &--gray {
     --bg: url("../../img/buttons/buttonLarge_gray.png");
   }
+  &--blue {
+    --shadow: #{HexToRGB(#4179aa)};
+    --bg: url("../../img/buttons/buttonLarge_blue.png");
+  }
   &--red {
+    --shadow: #{HexToRGB(#f78459)};
     --bg: url("../../img/buttons/buttonLarge_red.png");
     --min-w: 474px;
     --min-h: 86px;

@@ -4,7 +4,7 @@
 }
 :root {
 // --------------- default global variable ---------------
-  --body-bg: #101636;
+  --body-bg: #04123f;
   --footer-bg: #0C1323;
   --body-font-size: 16px;
   --header-height: 86px;
@@ -19,10 +19,6 @@
 // --------------- default JS tablet variable ---------------
   @media (max-width: 1024px) {
     --header-height: 65px;
-  }
-
-  @media (max-width: 767px) {
-    --header-height:82px;
   }
 
 
@@ -73,7 +69,7 @@
 
 
 // --------------- default background clr variable ---------------
---bg-body: #{HexToRGB(#0e1136)};
+--bg-body: #{HexToRGB(#04123f)};
 --bg-b: #{HexToRGB(#030202)};
 --bg-item-red: #{HexToRGB(#d7476d)};
 --bg-item-ppl: #{HexToRGB(#700fd7)};

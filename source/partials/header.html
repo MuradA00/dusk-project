@@ -1,6 +1,18 @@
 <header class="header">
   <div class="header-container container">
-    <div class="header-body">
+    <div class="header-body header-body_adaptive">
+      <div class="header-logo">
+        <img src="../img/headerLogo.png" alt="logo">
+      </div>
+      <button class="header-menu">
+        <img src="../img/burgerIcon.svg" alt="icon">
+      </button>
+    </div>
+    <div class="header-body header-body_desktop">
+      <div class="header-close">
+        <span></span>
+        <span></span>
+      </div>
       <div class="header-row">
         <div class="header-logo">
           <img src="../img/headerLogo.png" alt="logo">
@@ -11,7 +23,24 @@
               <a href="#" class="nav-link">home</a>
             </li>
             <li>
-              <a href="#" class="nav-link">features</a>
+              <div class="nav-dropdown">
+                <div class="nav-dropdown__flex">
+                  features <img src="../img/arrowBottom.png" alt="arrow">
+                </div>
+                <div class="nav-dropdown__hidden">
+                  <ul class="nav-dropdown__links">
+                    <a href="#" class="nav-dropdown__link">
+                      Link
+                    </a>
+                    <a href="#" class="nav-dropdown__link">
+                      Link
+                    </a>
+                    <a href="#" class="nav-dropdown__link">
+                      Link
+                    </a>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li>
               <a href="#" class="nav-link">about chronicle</a>
@@ -29,7 +58,31 @@
             <span>1582</span>
           </div>
         </div>
-        <div class="header-lang"></div>
+        <div class="header-lang">
+          <div class="header-selected">
+            <div class="header-selected__icon">
+              <img src="../img/flags/eng_flag.png" alt="flag">
+            </div>
+            <span class="header-selected__lang">En</span>
+            <img class="header-selected__arrow" src="../img/arrowBottom.png" alt="arrow">
+          </div>
+          <div class="header-lang__hidden">
+            <ul class="header-langs">
+              <li class="header-langs__item header-langs__item--selected">
+                <span>English</span>
+                <img src="../img/flags/eng_flag.png" alt="flag">
+              </li>
+              <li class="header-langs__item">
+                <span>Portugues</span>
+                <img src="../img/flags/port-flag.png" alt="flag">
+              </li>
+              <li class="header-langs__item">
+                <span>Español</span>
+                <img src="../img/flags/mex_flag.png" alt="flag">
+              </li>
+            </ul>
+          </div>
+        </div>
         <button class="header-login button button--purple button--small">
           sign in
         </button>
