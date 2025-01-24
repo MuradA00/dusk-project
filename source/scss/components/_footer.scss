@@ -2,6 +2,10 @@
   background-color: rgba(var(--clr-b), 0.25);
 
   color: #434a61;
+  position: relative;
+  &--filled {
+    background-color: #0c0d27 ;
+  }
   &-copy {
     font-size: 14px;
   }

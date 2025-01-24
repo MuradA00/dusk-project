@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body class="single-page">
+  @include("partials/header.html")
+  <main>
+    <section class="home">
+      <div class="home-container container">
+        <div class="home-body">
+          <div class="home-counter counter">
+            <ul class="counter-digits">
+              <li class="counter-unit">
+                <div class="counter-number">00</div>
+                <span class="counter-label">
+                  days
+                </span>
+              </li>
+              <li class="counter-unit">
+                <div class="counter-number">23</div>
+                <span class="counter-label">
+                  hours
+                </span>
+              </li>
+              <li class="counter-unit">
+                <div class="counter-number">18</div>
+                <span class="counter-label">
+                  min
+                </span>
+              </li>
+              <li class="counter-unit">
+                <div class="counter-number">60</div>
+                <span class="counter-label">
+                  sec
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="home-content">
+            <img class="home-logo" src="../../img/logo.webp" alt="logo">
+            <a href="#" class="home-buttton button button--red">
+              <span>start game</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="single">
+      <div class="single-container container">
+        <div class="single-body">
+          <span class="single-title">
+            features
+          </span>
+          <div class="single-box article">
+            <div class="article-section">
+              <div class="article-image article-image--framed article-image--wide">
+                <img src="img/single/articleImage_wide_first.webp" alt="image">
+              </div>
+              <h2 class="article-title">
+                Dynamic Experience: Solo or Party, Your Choice!
+              </h2>
+              <p class="article-description">While leveling in a party grants experience bonuses to encourage teamwork, the server is equally optimized for solo play. You can enjoy smooth progression and balanced content, no matter how you prefer to adventure.</p>
+            </div>
+            <div class="article-col">
+              <div class="article-image">
+                <img src="img/single/articleImage_tall_first.webp" alt="image">
+              </div>
+              <div class="article-info">
+                <h3 class="article-title">
+                  stage-based progression: play at your own pace:
+                </h3>
+                <p class="article-description">
+                  Our stage-based progression system ensures content is unlocked gradually, giving
+                  players of all levelsthe opportunity to enjoy the game without feeling rushed or left
+                  behind. This approach creates a more accessible and thrilling journey for everyone.
+                </p>
+                <a href="#" target="_blank" class="article-button">
+                  read more
+                </a>
+              </div>
+            </div>
+            <div class="article-col article-col--reversed article-col--borderless">
+              <div class="article-info">
+                <h2 class="article-title">
+                  Class Balance: Every Class is Viable and Unique
+                </h2>
+                <p class="article-description">
+                  One of the cornerstones of Dusk is our focus on class balance.
+                </p>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <span class="article-list__bullet"></span>
+                    <p class="article-description">Revamped Classes: We’ve reworked most classes to preserve their core identities while
+                      enhancing their strengths, making every class viable in both PvE and PvP.</p>
+                  </li>
+                  <li class="article-list__item">
+                    <span class="article-list__bullet"></span>
+                    <p class="article-description">
+                      New Tools: Every class now has additional tools to shine in party play and contribute
+                      meaningfully in PvE content.
+                    </p>
+                  </li>
+                  <li class="article-list__item">
+                    <span class="article-list__bullet"></span>
+                    <p class="article-description">
+                      Equal Opportunities: Whether you choose a tank, healer, damage dealer, or hybrid, your
+                      class will have a unique and rewarding role to play.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="article-image">
+                <img src="img/single/articleImage_tall_second.webp" alt="image">
+              </div>
+            </div>
+            <div class="article-section">
+              <div class="article-heading">
+                <h3 class="article-title">
+                  Primes: Epic Challenges for All Clan Sizes
+                </h3>
+                <span class="article-heading__bar"></span>
+              </div>
+              <div class="article-image article-image--framed article-image--wide">
+                <img src="img/single/articleImage_wide_second.webp" alt="image">
+              </div>
+              <p class="article-description">
+                Our Primes system brings epic raid challenges to life, tailored for different group dynamics:
+              </p>
+              <ul class="article-list">
+                <li class="article-list__item">
+                  <span class="article-list__bullet"></span>
+                  <p class="article-description">
+                    Epic Prime: For large, coordinated clans ready to conquer legendary foes.
+                  </p>
+                </li>
+                <li class="article-list__item">
+                  <span class="article-list__bullet"></span>
+                  <p class="article-description">
+                    Herald Prime: Designed for smaller clans or groups seeking their moment of glory.
+                  </p>
+                </li>
+              </ul>
+              <p class="article-description">
+                Team up, strategize, and dominate the battlefield!
+              </p>
+            </div>
+            <div class="article-section">
+              <div class="article-heading">
+                <h3 class="article-title">
+                  Balanced and Accessible Economy
+                </h3>
+                <span class="article-heading__bar"></span>
+              </div>
+              <div class="article-image article-image--framed article-image--wide">
+                <img src="img/single/articleImage_wide_third.webp" alt="image">
+              </div>
+              <p class="article-description">
+                Our economy revolves around the Einhasad Coin, earned by farming in leveling zones and completing daily instances. This allows all players to gear up quickly and focus on enjoying the game, without unfair barriers to entry.
+              </p>
+              <ul class="article-dropdowns">
+                <li class="article-dropdowns__item">
+                  <div class="article-dropdowns__visible">
+                    <span class="article-dropdowns__title">
+                      LONG SPOILER TITLE
+                    </span>
+                    <div class="article-dropdowns__arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="" opacity="1" data-original="#ffff" class=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="article-dropdowns__hidden">
+                    <p class="article-dropdowns__description article-description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ullam, rem ipsa adipisci quam vero provident sunt nam aperiam id optio animi iste velit tempora? Officia natus reprehenderit veniam minus.
+                    </p>
+                  </div>
+                </li>
+                <li class="article-dropdowns__item">
+                  <div class="article-dropdowns__visible">
+                    <span class="article-dropdowns__title">
+                      LONG SPOILER TITLE
+                    </span>
+                    <div class="article-dropdowns__arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="" opacity="1" data-original="#000000" class=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="article-dropdowns__hidden">
+                    <p class="article-dropdowns__description article-description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ullam, rem ipsa adipisci quam vero provident sunt nam aperiam id optio animi iste velit tempora? Officia natus reprehenderit veniam minus.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="article-col ">
+              <div class="article-image">
+                <img src="img/single/articleImage_tall_third.webp" alt="banner">
+              </div>
+              <div class="article-info">
+                <h4 class="article-title">
+                  Field Area Raid Bosses
+                </h4>
+                <p class="article-description">
+                  For those who enjoy focused challenges, we’ve introduced field area raid bosses, designed
+                  for a single party of up to 7 players. These encounters offer thrilling battles that
+                  emphasize skill and teamwork.
+                </p>
+              </div>
+            </div>
+            <div class="article-col article-col--reversed article-col--borderless">
+              <div class="article-info">
+                <h4 class="article-title">
+                  Optimized Gameplay and Enhanced Tools
+                </h4>
+                <p class="article-description">
+                  To further enrich your experience, we’ve introduced:
+                </p>
+                <ul class="article-list">
+                  <li class="article-list__item">
+                    <span class="article-list__bullet"></span>
+                    <p class="article-description">Optimized Macro Farming: Intelligent skill prioritization for seamless farming.</p>
+                  </li>
+                </ul>
+                <div class="article-flex">
+                  <img class="article-flex__icon" src="img/single/locationIcon.webp" alt="icon">
+                  <p class="article-description">
+                    Share Location: Available to all players, simplifying communication and coordination.
+                  </p>
+                </div>
+                <div class="article-flex">
+                  <img class="article-flex__icon" src="img/single/partyIcon.webp" alt="icon">
+                  <p class="article-description">
+                    Party Inquiry & Channel Commander Inquiry: Powerful tools for better party and
+                    raid management.
+                  </p>
+                </div>
+              </div>
+              <div class="article-image">
+                <img src="img/single/articleImage_tall_fourth.webp" alt="banner">
+              </div>
+            </div>
+            <div class="article-statistics">
+              <ul class="article-table">
+                <li class="article-table__row article-table__head">
+                  <span class="">
+                    title 1
+                  </span>
+                </li>
+                <li class="article-table__row article-table__head">
+                  <span class="">
+                    title 2
+                  </span>
+                </li>
+                <li class="article-table__row article-table__head">
+                  <span class="">
+                    title 3
+                  </span>
+                </li>
+                <li class="article-table__row article-table__head">
+                  <span class="">
+                    title 4
+                  </span>
+                </li>
+                <li class="article-table__row article-table__head">
+                  <span class="">
+                    title 5
+                  </span>
+                </li>
+              </ul>
+              <ul class="article-table article-table--dark">
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 1
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 2
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 3
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 4
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 5
+                  </p>
+                </li>
+              </ul>
+              <ul class="article-table article-table--light">
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 1
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 2
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 3
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 4
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 5
+                  </p>
+                </li>
+              </ul>
+              <ul class="article-table article-table--dark">
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 1
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 2
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 3
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 4
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 5
+                  </p>
+                </li>
+              </ul>
+              <ul class="article-table article-table--light">
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 1
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 2
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 3
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 4
+                  </p>
+                </li>
+                <li class="article-table__row">
+                  <p class="article-table__cell article-description">
+                    Value 5
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer--filled">
+    <div class="footer-container container">
+      <div class="footer-body">
+        <div class="footer-col">
+          <div class="footer-copy">
+            2025 © Dusk Servers - All rights reserved
+          </div>
+        </div>
+        <div class="footer-col">
+          <a href="#" dofollow="" title="Website development / разработка сайта UNSIMPLE WORLD" target="https://unsimpleworld.com/" class="footer-logo">
+            <svg class="footer-logo__icon">
+              <use href='img/sprite/sprite.svg#unsimple-logo'></use>
+            </svg>
+            <p class="footer-logo__inner">
+              <span class="footer-logo__header">Developed by</span>
+              <span class="footer-logo__bottom">unsimple world</span>
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="js/main.js"></script>
+</html>

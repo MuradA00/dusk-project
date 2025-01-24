@@ -7,8 +7,34 @@ const menuButton = document.querySelector('.header-menu');
 const menu = document.querySelector('.header-body_desktop');
 const tabsControllers = document.querySelectorAll(".news-filter__btn");
 const tabsContents = document.querySelectorAll(".news-content");
-const closeMenuButton = document.querySelector('.header-close')
+const closeMenuButton = document.querySelector('.header-close');
+const singlePageDropdowns = document.querySelectorAll(".article-dropdowns__item");
 const body = document.body;
+
+if (singlePageDropdowns.length) {
+  singlePageDropdowns.forEach((dropdown) => {
+    const hiddenContent = dropdown.querySelector(".article-dropdowns__hidden");
+
+    dropdown.addEventListener("click", () => {
+      const isExpanded = dropdown.classList.contains(
+        "article-dropdowns__item--expanded"
+      );
+
+      singlePageDropdowns.forEach((otherDropdown) => {
+        const otherHiddenContent = otherDropdown.querySelector(
+          ".article-dropdowns__hidden"
+        );
+        otherDropdown.classList.remove("article-dropdowns__item--expanded");
+        otherHiddenContent.style.maxHeight = null;
+      });
+
+      if (!isExpanded) {
+        dropdown.classList.add("article-dropdowns__item--expanded");
+        hiddenContent.style.maxHeight = hiddenContent.scrollHeight + "px";
+      }
+    });
+  });
+}
 
 if (tabsControllers.length) {
   tabsControllers.forEach((controller, i) => {
