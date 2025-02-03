@@ -9,7 +9,31 @@ const tabsControllers = document.querySelectorAll(".news-filter__btn");
 const tabsContents = document.querySelectorAll(".news-content");
 const closeMenuButton = document.querySelector('.header-close');
 const singlePageDropdowns = document.querySelectorAll(".article-dropdowns__item");
+const classesDisplays = document.querySelectorAll(".article-classes__item")
+const classesButtons = document.querySelectorAll(".article-buttons__item");
 const body = document.body;
+
+if (classesButtons.length) {
+  let activeIndex = 0;
+
+  classesButtons[activeIndex].classList.add("fade-in");
+  classesDisplays[activeIndex].classList.add("fade-in");
+
+  classesButtons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+      if (i === activeIndex) return;
+
+      classesButtons[activeIndex].classList.remove("active");
+      classesDisplays[activeIndex].classList.remove("fade-in");
+
+      button.classList.add("active");
+      classesDisplays[i].classList.add("fade-in");
+
+      activeIndex = i;
+    });
+  });
+}
+
 
 if (singlePageDropdowns.length) {
   singlePageDropdowns.forEach((dropdown) => {

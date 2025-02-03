@@ -56,8 +56,8 @@ body {
 }
 
 @keyframes fade-in {
-  from {opacity: 0; transform: translateY(0.5rem);}
-  to {opacity: 100%; transform: translateY(0);}
+  from {opacity: 0;}
+  to {opacity: 100%;}
 }
 
 .locked {

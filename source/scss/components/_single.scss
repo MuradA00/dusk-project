@@ -3,6 +3,10 @@
   &-container {
     --container-width: 1500px;
   }
+  .fade-in {
+    display: flex !important;
+    animation: fade-in 600ms ease;
+  }
   &-title {
     font-size: clamp( 2rem, 3.375vw, 54px);
     letter-spacing: 1px;
@@ -33,6 +37,16 @@
       width: clamp(32px, 2.75vw, 44px);
       aspect-ratio: 1;
       flex-shrink: 0;
+    }
+  }
+  &-classes {
+    &__item {
+      display: none;
+      flex-direction: column;
+      grid-gap: 1rem;
+    }
+    .active {
+      display: flex;
     }
   }
   &-dropdowns {
@@ -191,6 +205,26 @@
       transform: scale(1.05);
     }
   }
+  &-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: .5rem;
+    margin-bottom: 3.5rem;
+    &__item {
+      font-family: var(--ff);
+      text-transform: capitalize;
+      min-width: auto;
+      width: 100%;
+      min-height: clamp(44px, 3.375vw, 54px);
+      font-size: clamp(1rem, 1.125vw, 18px);
+      opacity: 0.6;
+      transition: all 300ms ease;
+      will-change: opacity, transform;
+    }
+    .active {
+      opacity: 1;
+    }
+  }
   &-image {
     --h: 456px;
     border-radius: 12px;
@@ -314,6 +348,58 @@
       &__row {
         min-height: 3rem;
         padding: 0 1rem;
+      }
+    }
+  }
+}
+
+
+.article-classes__item {
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  thead {
+    background-color: #2D365F;
+  }
+  th, td {
+    padding: 20px;
+    border: 5px solid rgba(var(--bg-body, 1));
+    text-align: left;
+    background-color: #fff;
+    color: #1E254D;
+    border-radius: 10px;
+  }
+  th {
+    font-family: var(--ff-cd);
+    color: rgba(var(--clr-w), .75);
+    background-color: rgba(var(--clr-w), .15);
+  }
+  .highlight {
+    color: #c79648;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 700px) {
+  .article {
+    &-buttons {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      &__item {
+        min-width: 140px;
+      }
+    }
+    &-classes {
+      &__table {
+        overflow-x: scroll;
+        table {
+          min-width: 700px;
+        }
       }
     }
   }
