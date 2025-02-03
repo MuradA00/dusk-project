@@ -231,6 +231,11 @@
     border: 1px solid #c0b196;
     position: relative;
     height: var(--h);
+    &--classes {
+      img {
+        object-position: center 25%;
+      }
+    }
     img {
       position: absolute;
       border-radius: inherit;
